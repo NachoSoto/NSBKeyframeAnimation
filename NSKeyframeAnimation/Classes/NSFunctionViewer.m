@@ -7,6 +7,7 @@
 //
 
 #import "NSFunctionViewer.h"
+#import "NSFunctionViewer+Animations.h"
 
 #import "NSKeyframeAnimation.h"
 #import "NSFunctionView.h"
@@ -21,16 +22,6 @@
 #define kAnimatedKeyPath @"position.x"
 #define kAnimationInterval (1)
 #define kAnimationPadding (80.0f)
-
-typedef enum
-{
-    AnimationTypeBounce = 0,
-    AnimationTypeEasyInElastic,
-    AnimationTypeEasyInOutElastic,
-    AnimationTypeEasyInOutCubic,
-    AnimationTypeEasyInBack,
-    AnimationTypeCount
-} AnimationType;
 
 @interface NSFunctionViewer () <UITableViewDataSource, UITableViewDelegate>
 
@@ -53,7 +44,7 @@ typedef enum
     {
         self.apple = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"apple"]] autorelease];
         
-        self.currentAnimationType = AnimationTypeBounce;
+        self.currentAnimationType = AnimationTypeEaseInQuad;
     }
     
     return self;
@@ -122,6 +113,7 @@ typedef enum
     self.tableView.dataSource = self;
     self.tableView.backgroundView = [[[UIView alloc] init] autorelease];
     self.tableView.backgroundColor = [UIColor clearColor];
+    self.tableView.showsVerticalScrollIndicator = NO;
     self.tableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleBottomMargin;
     [self.sideView addSubview:self.tableView];
     /* -- function picker -- */
@@ -152,48 +144,6 @@ typedef enum
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
 {
     return UIInterfaceOrientationIsLandscape(toInterfaceOrientation);
-}
-
-#pragma mark -
-
-+ (NSKeyframeAnimationFunction)animationFunctionForType:(AnimationType)animationType
-{
-    switch (animationType)
-    {
-        case AnimationTypeBounce:
-            return NSKeyframeAnimationFunctionBounce;
-        case AnimationTypeEasyInElastic:
-            return NSKeyframeAnimationFunctionEasyInElastic;
-        case AnimationTypeEasyInOutElastic:
-            return NSKeyframeAnimationFunctionEasyInOutElastic;
-        case AnimationTypeEasyInOutCubic:
-            return NSKeyframeAnimationFunctionEasyInOutCubic;
-        case AnimationTypeEasyInBack:
-            return NSKeyframeAnimationFunctionEasyInBack;
-        default:
-            return NULL;
-    }
-    
-    return NULL;
-}
-
-+ (NSString *)animatonNameForType:(AnimationType)animationType
-{   
-    switch (animationType)
-    {
-        case AnimationTypeBounce:
-            return @"Bounce";
-        case AnimationTypeEasyInElastic:
-            return @"Easy In Elastic";
-        case AnimationTypeEasyInOutElastic:
-            return @"Easy In Out Elastic";
-        case AnimationTypeEasyInOutCubic:
-            return @"Easy In Out Cubic";
-        case AnimationTypeEasyInBack:
-            return @"Easy In Back";
-        default:
-            return nil;
-    }
 }
 
 #pragma mark - table view data source

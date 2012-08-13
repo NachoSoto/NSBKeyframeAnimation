@@ -21,6 +21,7 @@
 		5764857415D8887B0076DB2F /* CAKeyframeAnimation+AnimationPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 5764856F15D8887B0076DB2F /* CAKeyframeAnimation+AnimationPath.m */; };
 		5764857515D8887B0076DB2F /* NSFunctionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5764857115D8887B0076DB2F /* NSFunctionView.m */; };
 		5764857615D8887B0076DB2F /* NSFunctionViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5764857315D8887B0076DB2F /* NSFunctionViewer.m */; };
+		5764857F15D89A440076DB2F /* NSFunctionViewer+Animations.m in Sources */ = {isa = PBXBuildFile; fileRef = 5764857E15D89A440076DB2F /* NSFunctionViewer+Animations.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,8 @@
 		5764857115D8887B0076DB2F /* NSFunctionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSFunctionView.m; path = Classes/NSFunctionView.m; sourceTree = "<group>"; };
 		5764857215D8887B0076DB2F /* NSFunctionViewer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSFunctionViewer.h; path = Classes/NSFunctionViewer.h; sourceTree = "<group>"; };
 		5764857315D8887B0076DB2F /* NSFunctionViewer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSFunctionViewer.m; path = Classes/NSFunctionViewer.m; sourceTree = "<group>"; };
+		5764857D15D89A440076DB2F /* NSFunctionViewer+Animations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSFunctionViewer+Animations.h"; path = "Classes/NSFunctionViewer+Animations.h"; sourceTree = "<group>"; };
+		5764857E15D89A440076DB2F /* NSFunctionViewer+Animations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSFunctionViewer+Animations.m"; path = "Classes/NSFunctionViewer+Animations.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +139,8 @@
 				5764857115D8887B0076DB2F /* NSFunctionView.m */,
 				5764857215D8887B0076DB2F /* NSFunctionViewer.h */,
 				5764857315D8887B0076DB2F /* NSFunctionViewer.m */,
+				5764857D15D89A440076DB2F /* NSFunctionViewer+Animations.h */,
+				5764857E15D89A440076DB2F /* NSFunctionViewer+Animations.m */,
 			);
 			name = Demo;
 			sourceTree = "<group>";
@@ -221,6 +226,7 @@
 				5764857415D8887B0076DB2F /* CAKeyframeAnimation+AnimationPath.m in Sources */,
 				5764857515D8887B0076DB2F /* NSFunctionView.m in Sources */,
 				5764857615D8887B0076DB2F /* NSFunctionViewer.m in Sources */,
+				5764857F15D89A440076DB2F /* NSFunctionViewer+Animations.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
