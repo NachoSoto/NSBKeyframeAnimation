@@ -42,6 +42,7 @@ typedef enum
     AnimationTypeEaseInBounce,
     AnimationTypeEaseOutBounce,
     AnimationTypeEaseInOutBounce,
+    AnimationTypeAll,
     AnimationTypeCount
 } AnimationType;
 

@@ -24,6 +24,9 @@
 #define kAnimationPadding (80.0f)
 
 @interface NSFunctionViewer () <UITableViewDataSource, UITableViewDelegate>
+{
+    BOOL _showingAllAnimations;
+}
 
 @property (nonatomic, retain) UIView *mainView;
 @property (nonatomic, retain) UIView *sideView;
@@ -44,7 +47,9 @@
     {
         self.apple = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"apple"]] autorelease];
         
-        self.currentAnimationType = AnimationTypeEaseInQuad;
+        self.currentAnimationType = 0;
+        
+        _showingAllAnimations = NO;
     }
     
     return self;
@@ -147,7 +152,7 @@
                                 animated:NO
                           scrollPosition:UITableViewRowAnimationTop];
     
-    [self createAnimation];
+    [self prepareAnimation];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
@@ -190,7 +195,19 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    self.currentAnimationType = (AnimationType)indexPath.row;
+    AnimationType newAnimationType = (AnimationType)indexPath.row;
+    
+    if (newAnimationType == AnimationTypeAll)
+    {
+        _showingAllAnimations = YES;
+        newAnimationType = 0; // start from the beginning
+    }
+    else
+    {
+        _showingAllAnimations = NO;
+    }
+
+    self.currentAnimationType = newAnimationType;
 }
 
 #pragma mark -
@@ -205,12 +222,12 @@
     return CGRectGetWidth(self.mainView.frame) - (CGRectGetWidth(self.apple.frame) / 2) - kAnimationPadding;
 }
 
-- (void)createAnimation
+- (void)prepareAnimation
 {
     NSKeyframeAnimationFunction c = [[self class] animationFunctionForType:self.currentAnimationType];
     
     float startValue = self.startValue,
-          endValue = self.endValue;
+          endValue   = self.endValue;
     
     NSKeyframeAnimation *animation = [NSKeyframeAnimation animationWithKeyPath:kAnimatedKeyPath
                                                                       duration:kAnimationDuration
@@ -222,10 +239,21 @@
         if (finished)
         {
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, kAnimationInterval * NSEC_PER_SEC), dispatch_get_main_queue(), ^(void){
-                [self createAnimation];
+                
+                [self prepareAnimation];
             });
         }
     };
+    
+    if (_showingAllAnimations)
+    {
+        [self.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:self.currentAnimationType inSection:0]
+                                    animated:YES
+                              scrollPosition:UITableViewScrollPositionMiddle];
+     
+        // next run will show the next animation
+        self.currentAnimationType = (self.currentAnimationType + 1) % (AnimationTypeCount - 1);
+    }
     
     [self.apple.layer setValue:@(endValue) forKeyPath:kAnimatedKeyPath];
     [self.apple.layer addAnimation:animation forKey:kAnimatedKeyPath];

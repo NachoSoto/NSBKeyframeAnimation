@@ -145,6 +145,8 @@
             return @"Ease Out Bounce";
         case AnimationTypeEaseInOutBounce:
             return @"Ease In Out Bounce";
+        case AnimationTypeAll:
+            return @"All Animations";
         default:
             return nil;
     }
