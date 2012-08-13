@@ -90,15 +90,24 @@
     /* -- actor -- */
     
     /* -- function view -- */
-    CGFloat functionViewSize = CGRectGetWidth(self.mainView.frame) * 0.8f;
+    const CGFloat functionViewPadding = 20.0f,
+                  functionViewSize = CGRectGetWidth(self.mainView.frame) * 0.8f;
     
-    self.functionView = [[[NSFunctionView alloc] initWithFrame:CGRectMake((CGRectGetWidth(self.view.frame) - functionViewSize) / 2,
-                                                                          CGRectGetMaxY(self.apple.frame) + kPadding,
-                                                                          functionViewSize,
-                                                                          functionViewSize)] autorelease];
+    const CGRect functionViewFrame = CGRectMake((CGRectGetWidth(self.view.frame) - functionViewSize) / 2,
+                                                CGRectGetMaxY(self.apple.frame) + kPadding,
+                                                functionViewSize,
+                                                functionViewSize);
     
-    self.functionView.backgroundColor = [UIColor colorWithWhite:1 alpha:0.1f];
-    [self.mainView addSubview:self.functionView];
+    UIView *functionViewBackground = [[[UIView alloc] initWithFrame:functionViewFrame] autorelease];
+    functionViewBackground.backgroundColor = [UIColor colorWithWhite:1 alpha:0.1f];
+    functionViewBackground.layer.cornerRadius = 10.0f;
+    
+    self.functionView = [[[NSFunctionView alloc] initWithFrame:CGRectInset(functionViewBackground.bounds,
+                                                                           functionViewPadding,
+                                                                           functionViewPadding)] autorelease];
+    
+    [functionViewBackground addSubview:self.functionView];
+    [self.mainView addSubview:functionViewBackground];
     /* -- function view -- */
     
     /* -- function picker -- */

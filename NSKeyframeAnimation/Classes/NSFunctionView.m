@@ -13,7 +13,47 @@
 #define kLineColor [UIColor blackColor].CGColor
 #define kLineWidth (2.0f)
 
-#define kPadding (40.0f)
+#define kPointColor [UIColor greenColor]
+#define kPointSize (8.0f)
+
+#define kPathAnimationKeyPath @"position"
+
+@interface PointLayer : CALayer
+
+@end
+
+@implementation PointLayer
+
+- (id)init
+{
+    if ((self = [super init]))
+    {
+        self.needsDisplayOnBoundsChange = YES;
+    }
+    
+    return self;
+}
+
+- (void)drawInContext:(CGContextRef)ctx
+{
+    CGContextSaveGState(ctx);
+    {
+        CGContextAddEllipseInRect(ctx, self.bounds);
+        CGContextSetFillColorWithColor(ctx, kPointColor.CGColor);
+        CGContextFillPath(ctx);
+    }
+    CGContextRestoreGState(ctx);
+}
+
+@end
+
+@interface NSFunctionView ()
+
+@property (nonatomic, retain) PointLayer *pointLayer;
+
+@property (nonatomic, retain) UIBezierPath *animationPath;
+
+@end
 
 @implementation NSFunctionView
 
@@ -21,7 +61,12 @@
 {
     if ((self = [super initWithFrame:frame]))
     {
+        self.pointLayer = [PointLayer layer];
+        self.pointLayer.frame = CGRectMake(0, 0, kPointSize, kPointSize);
         
+        self.backgroundColor = [UIColor clearColor];
+        
+        [self.layer addSublayer:self.pointLayer];
     }
     
     return self;
@@ -30,8 +75,27 @@
 - (void)dealloc
 {
     [_animation release];
+    [_animation release];
+    [_pointLayer release];
     
     [super dealloc];
+}
+
+#pragma mark -
+
+- (UIBezierPath *)animationPath
+{
+    if (_animationPath == nil)
+    {
+        self.animationPath = [self.animation animationPath];
+        
+        const CGFloat horizontalScale = self.frame.size.width,
+                      verticalScale = self.frame.size.height;
+        
+        [self.animationPath applyTransform:CGAffineTransformMakeScale(horizontalScale, verticalScale)];
+    }
+    
+    return _animationPath;
 }
 
 - (void)setAnimation:(CAKeyframeAnimation *)animation
@@ -41,26 +105,31 @@
         [_animation release];
         _animation = [animation retain];
         
+        self.animationPath = nil;
+        
+        CAKeyframeAnimation *pathAnimation = [CAKeyframeAnimation animationWithKeyPath:kPathAnimationKeyPath];
+        pathAnimation.path = self.animationPath.CGPath;
+        pathAnimation.duration = animation.duration;
+        pathAnimation.fillMode = kCAFillModeForwards;
+        pathAnimation.removedOnCompletion = NO;
+        
+        [self.pointLayer addAnimation:pathAnimation forKey:kPathAnimationKeyPath];
+        
         [self setNeedsDisplay];
     }
 }
 
 - (void)drawRect:(CGRect)rect
 {
-    UIBezierPath *path = [self.animation animationPath];
-    
-    const CGFloat horizontalScale = self.frame.size.width - kPadding,
-                  verticalScale =self.frame.size.height - kPadding;
-    
-    [path applyTransform:CGAffineTransformMakeScale(horizontalScale, verticalScale)];
+    UIBezierPath *path = self.animationPath;
     
     CGContextRef ctx = UIGraphicsGetCurrentContext();
     
     CGContextSaveGState(ctx);
     {
-        CGContextTranslateCTM(ctx, kPadding / 2, kPadding / 2);
         CGContextAddPath(ctx, path.CGPath);
         CGContextSetStrokeColorWithColor(ctx, kLineColor);
+        CGContextSetLineCap(ctx, kCGLineCapRound);
         CGContextSetLineWidth(ctx, kLineWidth);
         CGContextStrokePath(ctx);
     }
