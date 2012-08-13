@@ -87,12 +87,12 @@
 {
     if (_animationPath == nil)
     {
-        self.animationPath = [self.animation animationPath];
+        _animationPath = [[self.animation animationPath] retain];
         
         const CGFloat horizontalScale = self.frame.size.width,
                       verticalScale = self.frame.size.height;
         
-        [self.animationPath applyTransform:CGAffineTransformMakeScale(horizontalScale, verticalScale)];
+        [_animationPath applyTransform:CGAffineTransformMakeScale(horizontalScale, verticalScale)];
     }
     
     return _animationPath;

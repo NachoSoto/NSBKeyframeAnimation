@@ -151,6 +151,11 @@
     [self.tableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:self.currentAnimationType inSection:0]
                                 animated:NO
                           scrollPosition:UITableViewRowAnimationTop];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
     
     [self prepareAnimation];
 }
