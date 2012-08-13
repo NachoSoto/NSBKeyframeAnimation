@@ -32,7 +32,6 @@
                  xDelta = 1 / numValues;
     
     UIBezierPath *path = [UIBezierPath bezierPath];
-    [path moveToPoint:CGPointMake(0, 0)];
     
     NSUInteger i = 0;
     for (NSNumber *number in values)
@@ -41,7 +40,10 @@
         
         CGPoint p = CGPointMake(i * xDelta, (v - minValue) / difference);
         
-        [path addLineToPoint:p];
+        if (i == 0)
+            [path moveToPoint:p];
+        else
+            [path addLineToPoint:p];
         
         i++;
     }
