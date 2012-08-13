@@ -13,11 +13,11 @@
 		5738106315D0B4D3004FCB7F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5738106115D0B4D3004FCB7F /* InfoPlist.strings */; };
 		5738106515D0B4D3004FCB7F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5738106415D0B4D3004FCB7F /* main.m */; };
 		5738106915D0B4D3004FCB7F /* NSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5738106815D0B4D3004FCB7F /* NSAppDelegate.m */; };
-		5738107115D0B506004FCB7F /* NSKeyframeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5738107015D0B506004FCB7F /* NSKeyframeAnimation.m */; };
 		5738107415D0B533004FCB7F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5738107315D0B533004FCB7F /* QuartzCore.framework */; };
-		5738107B15D0B59B004FCB7F /* NSKeyframeAnimationFunctions.c in Sources */ = {isa = PBXBuildFile; fileRef = 5738107A15D0B59B004FCB7F /* NSKeyframeAnimationFunctions.c */; };
 		5738108515D0B849004FCB7F /* apple.png in Resources */ = {isa = PBXBuildFile; fileRef = 5738108415D0B849004FCB7F /* apple.png */; };
 		5738108715D0B9AE004FCB7F /* apple@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5738108615D0B9AE004FCB7F /* apple@2x.png */; };
+		5762176215D8CFC5000E16DD /* NSKeyframeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5762175F15D8CFC5000E16DD /* NSKeyframeAnimation.m */; };
+		5762176315D8CFC5000E16DD /* NSKeyframeAnimationFunctions.c in Sources */ = {isa = PBXBuildFile; fileRef = 5762176015D8CFC5000E16DD /* NSKeyframeAnimationFunctions.c */; };
 		5764857415D8887B0076DB2F /* CAKeyframeAnimation+AnimationPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 5764856F15D8887B0076DB2F /* CAKeyframeAnimation+AnimationPath.m */; };
 		5764857515D8887B0076DB2F /* NSFunctionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5764857115D8887B0076DB2F /* NSFunctionView.m */; };
 		5764857615D8887B0076DB2F /* NSFunctionViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5764857315D8887B0076DB2F /* NSFunctionViewer.m */; };
@@ -35,13 +35,13 @@
 		5738106615D0B4D3004FCB7F /* NSKeyframeAnimation-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSKeyframeAnimation-Prefix.pch"; sourceTree = "<group>"; };
 		5738106715D0B4D3004FCB7F /* NSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSAppDelegate.h; sourceTree = "<group>"; };
 		5738106815D0B4D3004FCB7F /* NSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSAppDelegate.m; sourceTree = "<group>"; };
-		5738106F15D0B506004FCB7F /* NSKeyframeAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSKeyframeAnimation.h; path = Classes/NSKeyframeAnimation.h; sourceTree = "<group>"; };
-		5738107015D0B506004FCB7F /* NSKeyframeAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSKeyframeAnimation.m; path = Classes/NSKeyframeAnimation.m; sourceTree = "<group>"; };
 		5738107315D0B533004FCB7F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		5738107A15D0B59B004FCB7F /* NSKeyframeAnimationFunctions.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = NSKeyframeAnimationFunctions.c; path = Classes/NSKeyframeAnimationFunctions.c; sourceTree = "<group>"; };
-		5738107C15D0B5AF004FCB7F /* NSKeyframeAnimationFunctions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NSKeyframeAnimationFunctions.h; path = Classes/NSKeyframeAnimationFunctions.h; sourceTree = "<group>"; };
 		5738108415D0B849004FCB7F /* apple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = apple.png; path = Resources/apple.png; sourceTree = "<group>"; };
 		5738108615D0B9AE004FCB7F /* apple@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "apple@2x.png"; path = "Resources/apple@2x.png"; sourceTree = "<group>"; };
+		5762175E15D8CFC5000E16DD /* NSKeyframeAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSKeyframeAnimation.h; path = Classes/NSKeyframeAnimation/NSKeyframeAnimation.h; sourceTree = "<group>"; };
+		5762175F15D8CFC5000E16DD /* NSKeyframeAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSKeyframeAnimation.m; path = Classes/NSKeyframeAnimation/NSKeyframeAnimation.m; sourceTree = "<group>"; };
+		5762176015D8CFC5000E16DD /* NSKeyframeAnimationFunctions.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = NSKeyframeAnimationFunctions.c; path = Classes/NSKeyframeAnimation/NSKeyframeAnimationFunctions.c; sourceTree = "<group>"; };
+		5762176115D8CFC5000E16DD /* NSKeyframeAnimationFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSKeyframeAnimationFunctions.h; path = Classes/NSKeyframeAnimation/NSKeyframeAnimationFunctions.h; sourceTree = "<group>"; };
 		5764856E15D8887B0076DB2F /* CAKeyframeAnimation+AnimationPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CAKeyframeAnimation+AnimationPath.h"; path = "Classes/CAKeyframeAnimation+AnimationPath.h"; sourceTree = "<group>"; };
 		5764856F15D8887B0076DB2F /* CAKeyframeAnimation+AnimationPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CAKeyframeAnimation+AnimationPath.m"; path = "Classes/CAKeyframeAnimation+AnimationPath.m"; sourceTree = "<group>"; };
 		5764857015D8887B0076DB2F /* NSFunctionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSFunctionView.h; path = Classes/NSFunctionView.h; sourceTree = "<group>"; };
@@ -120,10 +120,10 @@
 		5738107215D0B50A004FCB7F /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				5738106F15D0B506004FCB7F /* NSKeyframeAnimation.h */,
-				5738107015D0B506004FCB7F /* NSKeyframeAnimation.m */,
-				5738107C15D0B5AF004FCB7F /* NSKeyframeAnimationFunctions.h */,
-				5738107A15D0B59B004FCB7F /* NSKeyframeAnimationFunctions.c */,
+				5762175E15D8CFC5000E16DD /* NSKeyframeAnimation.h */,
+				5762175F15D8CFC5000E16DD /* NSKeyframeAnimation.m */,
+				5762176015D8CFC5000E16DD /* NSKeyframeAnimationFunctions.c */,
+				5762176115D8CFC5000E16DD /* NSKeyframeAnimationFunctions.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -221,12 +221,12 @@
 			files = (
 				5738106515D0B4D3004FCB7F /* main.m in Sources */,
 				5738106915D0B4D3004FCB7F /* NSAppDelegate.m in Sources */,
-				5738107115D0B506004FCB7F /* NSKeyframeAnimation.m in Sources */,
-				5738107B15D0B59B004FCB7F /* NSKeyframeAnimationFunctions.c in Sources */,
 				5764857415D8887B0076DB2F /* CAKeyframeAnimation+AnimationPath.m in Sources */,
 				5764857515D8887B0076DB2F /* NSFunctionView.m in Sources */,
 				5764857615D8887B0076DB2F /* NSFunctionViewer.m in Sources */,
 				5764857F15D89A440076DB2F /* NSFunctionViewer+Animations.m in Sources */,
+				5762176215D8CFC5000E16DD /* NSKeyframeAnimation.m in Sources */,
+				5762176315D8CFC5000E16DD /* NSKeyframeAnimationFunctions.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
