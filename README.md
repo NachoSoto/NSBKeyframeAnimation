@@ -19,8 +19,8 @@ NSBKeyframeAnimation *animation = [NSBKeyframeAnimation animationWithKeyPath:@"p
 [view.layer addAnimation:animation forKey:@"position.x"];
 ```
 ## Future improvements
-I'm working on a category to UIView to make using this class a much easier task. Coming soon!
-I will add helper methods so that you can easily generate animations on the ```transform``` keypath and create really cool effects.
+- I'm working on a category to UIView to make using this class a much easier task. Coming soon!
+- I will add helper methods so that you can easily generate animations on the ```transform``` keypath and create really cool effects.
 
 ## How To Use
 - Run ```git submodule add https://github.com/NachoSoto/NSBKeyframeAnimation Dependencies/NSBKeyframeAnimation```
