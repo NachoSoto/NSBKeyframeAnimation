@@ -10,14 +10,17 @@ NSBKeyframeAnimation allows you to create jQuery-like animations with a high lev
 ## Example:
 ```objc
 NSBKeyframeAnimation *animation = [NSBKeyframeAnimation animationWithKeyPath:@"position.x"
-                                                                   duration:5
-                                                                 startValue:0
-                                                                   endValue:1000
-                                                                   function:NSBKeyframeAnimationFunctionEaseInOutCubic];
+                                                                    duration:5
+                                                                  startValue:0
+                                                                    endValue:1000
+                                                                    function:NSBKeyframeAnimationFunctionEaseInOutCubic];
 
 [view.layer setValue:animation.values.lastObject forKeyPath:@"position.x"];
 [view.layer addAnimation:animation forKey:@"position.x"];
 ```
+## Future improvements
+I'm working on a category to UIView to make using this class a much easier task. Coming soon!
+I will add helper methods so that you can easily generate animations on the ```transform``` keypath and create really cool effects.
 
 ## How To Use
 - Run ```git submodule add https://github.com/NachoSoto/NSBKeyframeAnimation Dependencies/NSBKeyframeAnimation```
