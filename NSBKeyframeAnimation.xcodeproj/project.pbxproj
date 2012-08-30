@@ -1,0 +1,343 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5738105915D0B4D3004FCB7F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5738105815D0B4D3004FCB7F /* UIKit.framework */; };
+		5738105B15D0B4D3004FCB7F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5738105A15D0B4D3004FCB7F /* Foundation.framework */; };
+		5738105D15D0B4D3004FCB7F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5738105C15D0B4D3004FCB7F /* CoreGraphics.framework */; };
+		5738107415D0B533004FCB7F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5738107315D0B533004FCB7F /* QuartzCore.framework */; };
+		5761125815F00491005497D9 /* apple.png in Resources */ = {isa = PBXBuildFile; fileRef = 5761125615F00491005497D9 /* apple.png */; };
+		5761125915F00491005497D9 /* apple@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5761125715F00491005497D9 /* apple@2x.png */; };
+		5761125F15F004A9005497D9 /* NSBKeyframeAnimationFunctions.c in Sources */ = {isa = PBXBuildFile; fileRef = 5761125C15F004A9005497D9 /* NSBKeyframeAnimationFunctions.c */; };
+		5761126615F004F3005497D9 /* NSBFunctionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5761126115F004F3005497D9 /* NSBFunctionView.m */; };
+		5761126715F004F3005497D9 /* NSBFunctionViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5761126315F004F3005497D9 /* NSBFunctionViewer.m */; };
+		5761126815F004F3005497D9 /* NSBFunctionViewer+Animations.m in Sources */ = {isa = PBXBuildFile; fileRef = 5761126515F004F3005497D9 /* NSBFunctionViewer+Animations.m */; };
+		5761126B15F004FC005497D9 /* NSBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5761126A15F004FC005497D9 /* NSBAppDelegate.m */; };
+		5761126E15F00527005497D9 /* CAKeyframeAnimation+AnimationPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 5761126D15F00527005497D9 /* CAKeyframeAnimation+AnimationPath.m */; };
+		5761127115F00533005497D9 /* NSBKeyframeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5761127015F00533005497D9 /* NSBKeyframeAnimation.m */; };
+		5761127615F00614005497D9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5761127515F00614005497D9 /* main.m */; };
+		5761127E15F00634005497D9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5761127C15F00634005497D9 /* InfoPlist.strings */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5738105415D0B4D3004FCB7F /* NSBKeyframeAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSBKeyframeAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5738105815D0B4D3004FCB7F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5738105A15D0B4D3004FCB7F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5738105C15D0B4D3004FCB7F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5738107315D0B533004FCB7F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		5761125615F00491005497D9 /* apple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = apple.png; path = NSBKeyframeAnimation/Resources/apple.png; sourceTree = SOURCE_ROOT; };
+		5761125715F00491005497D9 /* apple@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "apple@2x.png"; path = "NSBKeyframeAnimation/Resources/apple@2x.png"; sourceTree = SOURCE_ROOT; };
+		5761125C15F004A9005497D9 /* NSBKeyframeAnimationFunctions.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; lineEnding = 0; name = NSBKeyframeAnimationFunctions.c; path = NSBKeyframeAnimation/Classes/NSBKeyframeAnimation/NSBKeyframeAnimationFunctions.c; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.c; };
+		5761125D15F004A9005497D9 /* NSBKeyframeAnimationFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = NSBKeyframeAnimationFunctions.h; path = NSBKeyframeAnimation/Classes/NSBKeyframeAnimation/NSBKeyframeAnimationFunctions.h; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		5761126015F004F3005497D9 /* NSBFunctionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = NSBFunctionView.h; path = NSBKeyframeAnimation/Classes/NSBFunctionView.h; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		5761126115F004F3005497D9 /* NSBFunctionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = NSBFunctionView.m; path = NSBKeyframeAnimation/Classes/NSBFunctionView.m; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		5761126215F004F3005497D9 /* NSBFunctionViewer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = NSBFunctionViewer.h; path = NSBKeyframeAnimation/Classes/NSBFunctionViewer.h; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		5761126315F004F3005497D9 /* NSBFunctionViewer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = NSBFunctionViewer.m; path = NSBKeyframeAnimation/Classes/NSBFunctionViewer.m; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		5761126415F004F3005497D9 /* NSBFunctionViewer+Animations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = "NSBFunctionViewer+Animations.h"; path = "NSBKeyframeAnimation/Classes/NSBFunctionViewer+Animations.h"; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		5761126515F004F3005497D9 /* NSBFunctionViewer+Animations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = "NSBFunctionViewer+Animations.m"; path = "NSBKeyframeAnimation/Classes/NSBFunctionViewer+Animations.m"; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		5761126915F004FC005497D9 /* NSBAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = NSBAppDelegate.h; path = NSBKeyframeAnimation/NSBAppDelegate.h; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		5761126A15F004FC005497D9 /* NSBAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = NSBAppDelegate.m; path = NSBKeyframeAnimation/NSBAppDelegate.m; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		5761126C15F00527005497D9 /* CAKeyframeAnimation+AnimationPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = "CAKeyframeAnimation+AnimationPath.h"; path = "NSBKeyframeAnimation/Classes/CAKeyframeAnimation+AnimationPath.h"; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		5761126D15F00527005497D9 /* CAKeyframeAnimation+AnimationPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = "CAKeyframeAnimation+AnimationPath.m"; path = "NSBKeyframeAnimation/Classes/CAKeyframeAnimation+AnimationPath.m"; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		5761126F15F00533005497D9 /* NSBKeyframeAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = NSBKeyframeAnimation.h; path = NSBKeyframeAnimation/Classes/NSBKeyframeAnimation/NSBKeyframeAnimation.h; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		5761127015F00533005497D9 /* NSBKeyframeAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = NSBKeyframeAnimation.m; path = NSBKeyframeAnimation/Classes/NSBKeyframeAnimation/NSBKeyframeAnimation.m; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		5761127215F005EF005497D9 /* NSBKeyframeAnimation-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "NSBKeyframeAnimation-Info.plist"; path = "NSBKeyframeAnimation/NSBKeyframeAnimation-Info.plist"; sourceTree = SOURCE_ROOT; };
+		5761127315F005EF005497D9 /* NSBKeyframeAnimation-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSBKeyframeAnimation-Prefix.pch"; path = "NSBKeyframeAnimation/NSBKeyframeAnimation-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		5761127515F00614005497D9 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = main.m; path = NSBKeyframeAnimation/main.m; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		5761127D15F00634005497D9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = NSBKeyframeAnimation/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5738105115D0B4D3004FCB7F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5738107415D0B533004FCB7F /* QuartzCore.framework in Frameworks */,
+				5738105915D0B4D3004FCB7F /* UIKit.framework in Frameworks */,
+				5738105B15D0B4D3004FCB7F /* Foundation.framework in Frameworks */,
+				5738105D15D0B4D3004FCB7F /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5738104915D0B4D3004FCB7F = {
+			isa = PBXGroup;
+			children = (
+				5738105E15D0B4D3004FCB7F /* NSBKeyframeAnimation */,
+				5738105715D0B4D3004FCB7F /* Frameworks */,
+				5738105515D0B4D3004FCB7F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5738105515D0B4D3004FCB7F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5738105415D0B4D3004FCB7F /* NSBKeyframeAnimation.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5738105715D0B4D3004FCB7F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5738107315D0B533004FCB7F /* QuartzCore.framework */,
+				5738105815D0B4D3004FCB7F /* UIKit.framework */,
+				5738105A15D0B4D3004FCB7F /* Foundation.framework */,
+				5738105C15D0B4D3004FCB7F /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5738105E15D0B4D3004FCB7F /* NSBKeyframeAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				5738108115D0B816004FCB7F /* Resources */,
+				5738107D15D0B75F004FCB7F /* Demo */,
+				5738107215D0B50A004FCB7F /* Classes */,
+				5738105F15D0B4D3004FCB7F /* Supporting Files */,
+			);
+			name = NSBKeyframeAnimation;
+			path = NSBKeyframeAnimation;
+			sourceTree = "<group>";
+		};
+		5738105F15D0B4D3004FCB7F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5761127C15F00634005497D9 /* InfoPlist.strings */,
+				5761127215F005EF005497D9 /* NSBKeyframeAnimation-Info.plist */,
+				5761127315F005EF005497D9 /* NSBKeyframeAnimation-Prefix.pch */,
+				5761127515F00614005497D9 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5738107215D0B50A004FCB7F /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5761126F15F00533005497D9 /* NSBKeyframeAnimation.h */,
+				5761127015F00533005497D9 /* NSBKeyframeAnimation.m */,
+				5761125C15F004A9005497D9 /* NSBKeyframeAnimationFunctions.c */,
+				5761125D15F004A9005497D9 /* NSBKeyframeAnimationFunctions.h */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		5738107D15D0B75F004FCB7F /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				5761126915F004FC005497D9 /* NSBAppDelegate.h */,
+				5761126A15F004FC005497D9 /* NSBAppDelegate.m */,
+				5761126015F004F3005497D9 /* NSBFunctionView.h */,
+				5761126115F004F3005497D9 /* NSBFunctionView.m */,
+				5761126215F004F3005497D9 /* NSBFunctionViewer.h */,
+				5761126315F004F3005497D9 /* NSBFunctionViewer.m */,
+				5761126415F004F3005497D9 /* NSBFunctionViewer+Animations.h */,
+				5761126515F004F3005497D9 /* NSBFunctionViewer+Animations.m */,
+				5761126C15F00527005497D9 /* CAKeyframeAnimation+AnimationPath.h */,
+				5761126D15F00527005497D9 /* CAKeyframeAnimation+AnimationPath.m */,
+			);
+			name = Demo;
+			sourceTree = "<group>";
+		};
+		5738108115D0B816004FCB7F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5761125615F00491005497D9 /* apple.png */,
+				5761125715F00491005497D9 /* apple@2x.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5738105315D0B4D3004FCB7F /* NSBKeyframeAnimation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5738106C15D0B4D3004FCB7F /* Build configuration list for PBXNativeTarget "NSBKeyframeAnimation" */;
+			buildPhases = (
+				5738105015D0B4D3004FCB7F /* Sources */,
+				5738105115D0B4D3004FCB7F /* Frameworks */,
+				5738105215D0B4D3004FCB7F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NSBKeyframeAnimation;
+			productName = NSBKeyframeAnimation;
+			productReference = 5738105415D0B4D3004FCB7F /* NSBKeyframeAnimation.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5738104B15D0B4D3004FCB7F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = NS;
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "Nacho Soto";
+			};
+			buildConfigurationList = 5738104E15D0B4D3004FCB7F /* Build configuration list for PBXProject "NSBKeyframeAnimation" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5738104915D0B4D3004FCB7F;
+			productRefGroup = 5738105515D0B4D3004FCB7F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5738105315D0B4D3004FCB7F /* NSBKeyframeAnimation */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5738105215D0B4D3004FCB7F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5761125815F00491005497D9 /* apple.png in Resources */,
+				5761125915F00491005497D9 /* apple@2x.png in Resources */,
+				5761127E15F00634005497D9 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5738105015D0B4D3004FCB7F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5761125F15F004A9005497D9 /* NSBKeyframeAnimationFunctions.c in Sources */,
+				5761126615F004F3005497D9 /* NSBFunctionView.m in Sources */,
+				5761126715F004F3005497D9 /* NSBFunctionViewer.m in Sources */,
+				5761126815F004F3005497D9 /* NSBFunctionViewer+Animations.m in Sources */,
+				5761126B15F004FC005497D9 /* NSBAppDelegate.m in Sources */,
+				5761126E15F00527005497D9 /* CAKeyframeAnimation+AnimationPath.m in Sources */,
+				5761127115F00533005497D9 /* NSBKeyframeAnimation.m in Sources */,
+				5761127615F00614005497D9 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5761127C15F00634005497D9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5761127D15F00634005497D9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5738106A15D0B4D3004FCB7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		5738106B15D0B4D3004FCB7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5738106D15D0B4D3004FCB7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NSBKeyframeAnimation/NSBKeyframeAnimation-Prefix.pch";
+				INFOPLIST_FILE = "NSBKeyframeAnimation/NSBKeyframeAnimation-Info.plist";
+				PRODUCT_NAME = NSBKeyframeAnimation;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5738106E15D0B4D3004FCB7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NSBKeyframeAnimation/NSBKeyframeAnimation-Prefix.pch";
+				INFOPLIST_FILE = "NSBKeyframeAnimation/NSBKeyframeAnimation-Info.plist";
+				PRODUCT_NAME = NSBKeyframeAnimation;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5738104E15D0B4D3004FCB7F /* Build configuration list for PBXProject "NSBKeyframeAnimation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5738106A15D0B4D3004FCB7F /* Debug */,
+				5738106B15D0B4D3004FCB7F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5738106C15D0B4D3004FCB7F /* Build configuration list for PBXNativeTarget "NSBKeyframeAnimation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5738106D15D0B4D3004FCB7F /* Debug */,
+				5738106E15D0B4D3004FCB7F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5738104B15D0B4D3004FCB7F /* Project object */;
+}

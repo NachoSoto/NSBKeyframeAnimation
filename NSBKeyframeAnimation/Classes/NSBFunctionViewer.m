@@ -1,16 +1,16 @@
 //
-//  NSFunctionViewer.m
-//  NSKeyframeAnimation
+//  NSBFunctionViewer.m
+//  NSBKeyframeAnimation
 //
 //  Created by Nacho Soto on 8/6/12.
 //  Copyright (c) 2012 Nacho Soto. All rights reserved.
 //
 
-#import "NSFunctionViewer.h"
-#import "NSFunctionViewer+Animations.h"
+#import "NSBFunctionViewer.h"
+#import "NSBFunctionViewer+Animations.h"
 
-#import "NSKeyframeAnimation.h"
-#import "NSFunctionView.h"
+#import "NSBKeyframeAnimation.h"
+#import "NSBFunctionView.h"
 
 #define kMainViewProportion (0.7f)
 #define kBackgroundColor [UIColor scrollViewTexturedBackgroundColor]
@@ -23,7 +23,7 @@
 #define kAnimationInterval (1)
 #define kAnimationPadding (80.0f)
 
-@interface NSFunctionViewer () <UITableViewDataSource, UITableViewDelegate>
+@interface NSBFunctionViewer () <UITableViewDataSource, UITableViewDelegate>
 {
     BOOL _showingAllAnimations;
 }
@@ -33,13 +33,13 @@
 
 @property (nonatomic, retain) UIImageView *apple;
 @property (nonatomic, retain) UITableView *tableView;
-@property (nonatomic, retain) NSFunctionView *functionView;
+@property (nonatomic, retain) NSBFunctionView *functionView;
 
 @property (nonatomic, assign) AnimationType currentAnimationType;
 
 @end
 
-@implementation NSFunctionViewer
+@implementation NSBFunctionViewer
 
 - (id)init
 {
@@ -107,7 +107,7 @@
     functionViewBackground.backgroundColor = [UIColor colorWithWhite:1 alpha:0.1f];
     functionViewBackground.layer.cornerRadius = 10.0f;
     
-    self.functionView = [[[NSFunctionView alloc] initWithFrame:CGRectInset(functionViewBackground.bounds,
+    self.functionView = [[[NSBFunctionView alloc] initWithFrame:CGRectInset(functionViewBackground.bounds,
                                                                            functionViewPadding,
                                                                            functionViewPadding)] autorelease];
     
@@ -229,12 +229,12 @@
 
 - (void)prepareAnimation
 {
-    NSKeyframeAnimationFunction c = [[self class] animationFunctionForType:self.currentAnimationType];
+    NSBKeyframeAnimationFunction c = [[self class] animationFunctionForType:self.currentAnimationType];
     
     float startValue = self.startValue,
           endValue   = self.endValue;
     
-    NSKeyframeAnimation *animation = [NSKeyframeAnimation animationWithKeyPath:kAnimatedKeyPath
+    NSBKeyframeAnimation *animation = [NSBKeyframeAnimation animationWithKeyPath:kAnimatedKeyPath
                                                                       duration:kAnimationDuration
                                                                     startValue:startValue
                                                                       endValue:endValue

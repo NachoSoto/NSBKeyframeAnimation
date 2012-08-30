@@ -1,16 +1,16 @@
 //
-//  NSAppDelegate.m
-//  NSKeyframeAnimation
+//  NSBAppDelegate.m
+//  NSBKeyframeAnimation
 //
 //  Created by Nacho Soto on 8/6/12.
 //  Copyright (c) 2012 Nacho Soto. All rights reserved.
 //
 
-#import "NSAppDelegate.h"
+#import "NSBAppDelegate.h"
 
-#import "NSFunctionViewer.h"
+#import "NSBFunctionViewer.h"
 
-@implementation NSAppDelegate
+@implementation NSBAppDelegate
 
 - (void)dealloc
 {
@@ -22,7 +22,7 @@
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
 
-    [self.window setRootViewController:[[[NSFunctionViewer alloc] init] autorelease]];
+    [self.window setRootViewController:[[[NSBFunctionViewer alloc] init] autorelease]];
     
     [self.window makeKeyAndVisible];
     return YES;

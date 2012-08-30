@@ -1,12 +1,12 @@
 //
-//  NSFunctionView.m
-//  NSKeyframeAnimation
+//  NSBFunctionView.m
+//  NSBKeyframeAnimation
 //
 //  Created by Nacho Soto on 8/6/12.
 //  Copyright (c) 2012 Nacho Soto. All rights reserved.
 //
 
-#import "NSFunctionView.h"
+#import "NSBFunctionView.h"
 
 #import "CAKeyframeAnimation+AnimationPath.h"
 
@@ -47,7 +47,7 @@
 
 @end
 
-@interface NSFunctionView ()
+@interface NSBFunctionView ()
 
 @property (nonatomic, retain) PointLayer *pointLayer;
 
@@ -55,7 +55,7 @@
 
 @end
 
-@implementation NSFunctionView
+@implementation NSBFunctionView
 
 - (id)initWithFrame:(CGRect)frame
 {

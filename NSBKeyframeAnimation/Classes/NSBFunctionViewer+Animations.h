@@ -1,14 +1,14 @@
 //
-//  NSFunctionViewer+Animations.h
-//  NSKeyframeAnimation
+//  NSBFunctionViewer+Animations.h
+//  NSBKeyframeAnimation
 //
 //  Created by Nacho Soto on 8/12/12.
 //  Copyright (c) 2012 Nacho Soto. All rights reserved.
 //
 
-#import "NSFunctionViewer.h"
+#import "NSBFunctionViewer.h"
 
-#import "NSKeyframeAnimationFunctions.h"
+#import "NSBKeyframeAnimationFunctions.h"
 
 typedef enum
 {
@@ -46,9 +46,9 @@ typedef enum
     AnimationTypeCount
 } AnimationType;
 
-@interface NSFunctionViewer (Animations)
+@interface NSBFunctionViewer (Animations)
 
 + (NSString *)animatonNameForType:(AnimationType)animationType;
-+ (NSKeyframeAnimationFunction)animationFunctionForType:(AnimationType)animationType;
++ (NSBKeyframeAnimationFunction)animationFunctionForType:(AnimationType)animationType;
 
 @end

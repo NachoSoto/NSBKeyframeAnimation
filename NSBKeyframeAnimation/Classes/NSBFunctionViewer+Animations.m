@@ -1,79 +1,79 @@
 //
-//  NSFunctionViewer+Animations.m
-//  NSKeyframeAnimation
+//  NSBFunctionViewer+Animations.m
+//  NSBKeyframeAnimation
 //
 //  Created by Nacho Soto on 8/12/12.
 //  Copyright (c) 2012 Nacho Soto. All rights reserved.
 //
 
-#import "NSFunctionViewer+Animations.h"
+#import "NSBFunctionViewer+Animations.h"
 
-@implementation NSFunctionViewer (Animations)
+@implementation NSBFunctionViewer (Animations)
 
-+ (NSKeyframeAnimationFunction)animationFunctionForType:(AnimationType)animationType
++ (NSBKeyframeAnimationFunction)animationFunctionForType:(AnimationType)animationType
 {
     switch (animationType)
     {
         case AnimationTypeEaseInQuad:
-            return NSKeyframeAnimationFunctionEaseInQuad;
+            return NSBKeyframeAnimationFunctionEaseInQuad;
         case AnimationTypeEaseOutQuad:
-            return NSKeyframeAnimationFunctionEaseOutQuad;
+            return NSBKeyframeAnimationFunctionEaseOutQuad;
         case AnimationTypeEaseInOutQuad:
-            return NSKeyframeAnimationFunctionEaseInOutQuad;
+            return NSBKeyframeAnimationFunctionEaseInOutQuad;
         case AnimationTypeEaseInCubic:
-            return NSKeyframeAnimationFunctionEaseInCubic;
+            return NSBKeyframeAnimationFunctionEaseInCubic;
         case AnimationTypeEaseOutCubic:
-            return NSKeyframeAnimationFunctionEaseOutCubic;
+            return NSBKeyframeAnimationFunctionEaseOutCubic;
         case AnimationTypeEaseInOutCubic:
-            return NSKeyframeAnimationFunctionEaseInOutCubic;
+            return NSBKeyframeAnimationFunctionEaseInOutCubic;
         case AnimationTypeEaseInQuart:
-            return NSKeyframeAnimationFunctionEaseInQuart;
+            return NSBKeyframeAnimationFunctionEaseInQuart;
         case AnimationTypeEaseOutQuart:
-            return NSKeyframeAnimationFunctionEaseOutQuart;
+            return NSBKeyframeAnimationFunctionEaseOutQuart;
         case AnimationTypeEaseInOutQuart:
-            return NSKeyframeAnimationFunctionEaseInOutQuart;
+            return NSBKeyframeAnimationFunctionEaseInOutQuart;
         case AnimationTypeEaseInQuint:
-            return NSKeyframeAnimationFunctionEaseInQuint;
+            return NSBKeyframeAnimationFunctionEaseInQuint;
         case AnimationTypeEaseOutQuint:
-            return NSKeyframeAnimationFunctionEaseOutQuint;
+            return NSBKeyframeAnimationFunctionEaseOutQuint;
         case AnimationTypeEaseInOutQuint:
-            return NSKeyframeAnimationFunctionEaseInOutQuint;
+            return NSBKeyframeAnimationFunctionEaseInOutQuint;
         case AnimationTypeEaseInSine:
-            return NSKeyframeAnimationFunctionEaseInSine;
+            return NSBKeyframeAnimationFunctionEaseInSine;
         case AnimationTypeEaseOutSine:
-            return NSKeyframeAnimationFunctionEaseOutSine;
+            return NSBKeyframeAnimationFunctionEaseOutSine;
         case AnimationTypeEaseInOutSine:
-            return NSKeyframeAnimationFunctionEaseInOutSine;
+            return NSBKeyframeAnimationFunctionEaseInOutSine;
         case AnimationTypeEaseInExpo:
-            return NSKeyframeAnimationFunctionEaseInExpo;
+            return NSBKeyframeAnimationFunctionEaseInExpo;
         case AnimationTypeEaseOutExpo:
-            return NSKeyframeAnimationFunctionEaseOutExpo;
+            return NSBKeyframeAnimationFunctionEaseOutExpo;
         case AnimationTypeEaseInOutExpo:
-            return NSKeyframeAnimationFunctionEaseInOutExpo;
+            return NSBKeyframeAnimationFunctionEaseInOutExpo;
         case AnimationTypeEaseInCirc:
-            return NSKeyframeAnimationFunctionEaseInCirc;
+            return NSBKeyframeAnimationFunctionEaseInCirc;
         case AnimationTypeEaseOutCirc:
-            return NSKeyframeAnimationFunctionEaseOutCirc;
+            return NSBKeyframeAnimationFunctionEaseOutCirc;
         case AnimationTypeEaseInOutCirc:
-            return NSKeyframeAnimationFunctionEaseInOutCirc;
+            return NSBKeyframeAnimationFunctionEaseInOutCirc;
         case AnimationTypeEaseInElastic:
-            return NSKeyframeAnimationFunctionEaseInElastic;
+            return NSBKeyframeAnimationFunctionEaseInElastic;
         case AnimationTypeEaseOutElastic:
-            return NSKeyframeAnimationFunctionEaseOutElastic;
+            return NSBKeyframeAnimationFunctionEaseOutElastic;
         case AnimationTypeEaseInOutElastic:
-            return NSKeyframeAnimationFunctionEaseInOutElastic;
+            return NSBKeyframeAnimationFunctionEaseInOutElastic;
         case AnimationTypeEaseInBack:
-            return NSKeyframeAnimationFunctionEaseInBack;
+            return NSBKeyframeAnimationFunctionEaseInBack;
         case AnimationTypeEaseOutBack:
-            return NSKeyframeAnimationFunctionEaseOutBack;
+            return NSBKeyframeAnimationFunctionEaseOutBack;
         case AnimationTypeEaseInOutBack:
-            return NSKeyframeAnimationFunctionEaseInOutBack;
+            return NSBKeyframeAnimationFunctionEaseInOutBack;
         case AnimationTypeEaseInBounce:
-            return NSKeyframeAnimationFunctionEaseInBounce;
+            return NSBKeyframeAnimationFunctionEaseInBounce;
         case AnimationTypeEaseOutBounce:
-            return NSKeyframeAnimationFunctionEaseOutBounce;
+            return NSBKeyframeAnimationFunctionEaseOutBounce;
         case AnimationTypeEaseInOutBounce:
-            return NSKeyframeAnimationFunctionEaseInOutBounce;
+            return NSBKeyframeAnimationFunctionEaseInOutBounce;
         default:
             return NULL;
     }

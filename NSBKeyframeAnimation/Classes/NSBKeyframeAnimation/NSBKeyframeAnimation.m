@@ -1,29 +1,29 @@
 //
-//  NSKeyframeAnimation.m
-//  NSKeyframeAnimation
+//  NSBKeyframeAnimation.m
+//  NSBKeyframeAnimation
 //
 //  Created by Nacho Soto on 8/6/12.
 //  Copyright (c) 2012 Nacho Soto. All rights reserved.
 //
 
-#import "NSKeyframeAnimation.h"
+#import "NSBKeyframeAnimation.h"
 
 #define kFPS 60
 
-@interface NSKeyframeAnimation ()
+@interface NSBKeyframeAnimation ()
 {
-    NSKeyframeAnimationFunction f;
+    NSBKeyframeAnimationFunction f;
 }
 
 @end
 
-@implementation NSKeyframeAnimation
+@implementation NSBKeyframeAnimation
 
 - (id)initWithKeyPath:(NSString *)keypath
              duration:(NSTimeInterval)duration
            startValue:(double)startValue
              endValue:(double)endValue
-             function:(NSKeyframeAnimationFunction)function
+             function:(NSBKeyframeAnimationFunction)function
 {
     if ((self = [super init]))
     {
@@ -44,7 +44,7 @@
                   duration:(NSTimeInterval)duration
                 startValue:(double)startValue
                   endValue:(double)endValue
-                  function:(NSKeyframeAnimationFunction)function
+                  function:(NSBKeyframeAnimationFunction)function
 {
     return [[[self alloc] initWithKeyPath:keypath duration:duration startValue:startValue endValue:endValue function:function] autorelease];
 }
@@ -86,7 +86,7 @@
 
 #pragma mark -
 
-- (void)setCompletionBlock:(NSKeyframeAnimationCompletionBlock)completionBlock
+- (void)setCompletionBlock:(NSBKeyframeAnimationCompletionBlock)completionBlock
 {
     if (_completionBlock != completionBlock)
     {
