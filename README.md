@@ -28,5 +28,8 @@ NSBKeyframeAnimation *animation = [NSBKeyframeAnimation animationWithKeyPath:@"p
 - Add QuartzCore.framework to project libraries.
 - You're all set!
 
+## Compatibility:
+- NSBKeyframeAnimation doesn't use ARC. You can compile it in your ARC project by adding the linker flag ```-fobjc-arc```.
+
 ## Licence
 NSBKeyframeAnimation is available under the MIT license. See the LICENSE file for more info.
