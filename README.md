@@ -25,6 +25,7 @@ NSBKeyframeAnimation *animation = [NSBKeyframeAnimation animationWithKeyPath:@"p
 ## How To Use
 - Run ```git submodule add https://github.com/NachoSoto/NSBKeyframeAnimation Dependencies/NSBKeyframeAnimation```
 - Add ```Dependencies/NSBKeyframeAnimation/Classes/NSBKeyframeAnimation``` files to your project.
+- Add QuartzCore.framework to project libraries.
 - You're all set!
 
 ## Licence
