@@ -75,7 +75,7 @@
 - (void)dealloc
 {
     [_animation release];
-    [_animation release];
+    [_animationPath release];
     [_pointLayer release];
     
     [super dealloc];
