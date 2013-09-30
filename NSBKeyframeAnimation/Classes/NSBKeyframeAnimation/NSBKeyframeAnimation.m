@@ -46,14 +46,7 @@
                   endValue:(double)endValue
                   function:(NSBKeyframeAnimationFunction)function
 {
-    return [[[self alloc] initWithKeyPath:keypath duration:duration startValue:startValue endValue:endValue function:function] autorelease];
-}
-
-- (void)dealloc
-{
-    [_completionBlock release];
-    
-    [super dealloc];
+    return [[self alloc] initWithKeyPath:keypath duration:duration startValue:startValue endValue:endValue function:function];
 }
 
 #pragma mark -
@@ -90,7 +83,6 @@
 {
     if (_completionBlock != completionBlock)
     {
-        [_completionBlock release];
         _completionBlock = [completionBlock copy];
         
         self.delegate = self;
