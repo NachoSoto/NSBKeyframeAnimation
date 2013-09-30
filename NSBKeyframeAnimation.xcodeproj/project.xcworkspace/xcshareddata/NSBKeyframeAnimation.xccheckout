@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>9B51B6CC-3B54-4E83-B3B8-4D2C5C92F846</string>
+	<key>IDESourceControlProjectName</key>
+	<string>NSBKeyframeAnimation</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>3E04ABA0-B6B3-447C-A771-5BB7F4AF7561</key>
+		<string>https://github.com/iluuu1994/NSBKeyframeAnimation.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>NSBKeyframeAnimation.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>3E04ABA0-B6B3-447C-A771-5BB7F4AF7561</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/iluuu1994/NSBKeyframeAnimation.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>3E04ABA0-B6B3-447C-A771-5BB7F4AF7561</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3E04ABA0-B6B3-447C-A771-5BB7F4AF7561</string>
+			<key>IDESourceControlWCCName</key>
+			<string>NSBKeyframeAnimation</string>
+		</dict>
+	</array>
+</dict>
+</plist>
