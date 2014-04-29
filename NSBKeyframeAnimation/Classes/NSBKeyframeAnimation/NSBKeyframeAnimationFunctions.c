@@ -15,66 +15,85 @@
 
 double NSBKeyframeAnimationFunctionEaseInQuad(double t,double b, double c, double d)
 {
-    return c*(t/=d)*t + b;
+    t/=d;
+    return c*t*t + b;
 }
 
 double NSBKeyframeAnimationFunctionEaseOutQuad(double t,double b, double c, double d)
 {
-    return -c *(t/=d)*(t-2) + b;
+    t/=d;
+    return -c *t*(t-2) + b;
 }
 
 double NSBKeyframeAnimationFunctionEaseInOutQuad(double t,double b, double c, double d)
 {
-    if ((t/=d/2) < 1) return c/2*t*t + b;
-    return -c/2 * ((--t)*(t-2) - 1) + b;
+    t/=d/2;
+    if (t < 1) return c/2*t*t + b;
+    --t;
+    return -c/2 * (t*(t-2) - 1) + b;
 }
 
 double NSBKeyframeAnimationFunctionEaseInCubic(double t,double b, double c, double d)
 {
-    return c*(t/=d)*t*t + b;
+    t/=d;
+    return c*t*t*t + b;
 }
 
 double NSBKeyframeAnimationFunctionEaseOutCubic(double t,double b, double c, double d)
 {
-    return c*((t=t/d-1)*t*t + 1) + b;
+    t=t/d-1;
+    return c*(t*t*t + 1) + b;
 }
 
 double NSBKeyframeAnimationFunctionEaseInOutCubic(double t, double b, double c, double d)
 {
-    if ((t/=d/2) < 1) return c/2*t*t*t + b;
-    return c/2*((t-=2)*t*t + 2) + b;
+    t/=d/2;
+    if (t < 1) return c/2*t*t*t + b;
+    
+    t-=2;
+    return c/2*(t*t*t + 2) + b;
 }
 
 double NSBKeyframeAnimationFunctionEaseInQuart(double t, double b, double c, double d)
 {
-    return c*(t/=d)*t*t*t + b;
+    t/=d;
+    return c*t*t*t*t + b;
 }
 
 double NSBKeyframeAnimationFunctionEaseOutQuart(double t, double b, double c, double d)
 {
-    return -c * ((t=t/d-1)*t*t*t - 1) + b;
+    t=t/d-1;
+    return -c * (t*t*t*t - 1) + b;
 }
 
 double NSBKeyframeAnimationFunctionEaseInOutQuart(double t, double b, double c, double d)
 {
-    if ((t/=d/2) < 1) return c/2*t*t*t*t + b;
-    return -c/2 * ((t-=2)*t*t*t - 2) + b;
+    t/=d/2;
+    if (t < 1) return c/2*t*t*t*t + b;
+    
+    t-=2;
+    return -c/2 * (t*t*t*t - 2) + b;
 }
 
 double NSBKeyframeAnimationFunctionEaseInQuint(double t, double b, double c, double d)
 {
-    return c*(t/=d)*t*t*t*t + b;
+    t/=d;
+    return c*t*t*t*t*t + b;
 }
 
 double NSBKeyframeAnimationFunctionEaseOutQuint(double t, double b, double c, double d)
 {
-    return c*((t=t/d-1)*t*t*t*t + 1) + b;
+    t=t/d-1;
+    return c*(t*t*t*t*t + 1) + b;
 }
 
 double NSBKeyframeAnimationFunctionEaseInOutQuint(double t, double b, double c, double d)
 {
-    if ((t/=d/2) < 1) return c/2*t*t*t*t*t + b;
-    return c/2*((t-=2)*t*t*t*t + 2) + b;
+    t/=d/2;
+    if (t < 1) return c/2*t*t*t*t*t + b;
+    
+    t-=2;
+    return c/2*(t*t*t*t*t + 2) + b;
 }
 
 double NSBKeyframeAnimationFunctionEaseInSine(double t, double b, double c, double d)
@@ -112,18 +131,22 @@ double NSBKeyframeAnimationFunctionEaseInOutExpo(double t, double b, double c, d
 
 double NSBKeyframeAnimationFunctionEaseInCirc(double t, double b, double c, double d)
 {
-    return -c * (sqrt(1 - (t/=d)*t) - 1) + b;
+    t/=d;
+    return -c * (sqrt(1 - (t)*t) - 1) + b;
 }
 
 double NSBKeyframeAnimationFunctionEaseOutCirc(double t, double b, double c, double d)
 {
-    return c * sqrt(1 - (t=t/d-1)*t) + b;
+    t=t/d-1;
+    return c * sqrt(1 - (t)*t) + b;
 }
 
 double NSBKeyframeAnimationFunctionEaseInOutCirc(double t, double b, double c, double d)
 {
     if ((t/=d/2) < 1) return -c/2 * (sqrt(1 - t*t) - 1) + b;
-    return c/2 * (sqrt(1 - (t-=2)*t) + 1) + b;
+    
+    t-=2;
+    return c/2 * (sqrt(1 - (t)*t) + 1) + b;
 }
 
 double NSBKeyframeAnimationFunctionEaseInElastic(double t, double b, double c, double d)
@@ -133,7 +156,9 @@ double NSBKeyframeAnimationFunctionEaseInElastic(double t, double b, double c, d
     if (t==0) return b;  if ((t/=d)==1) return b+c;  if (!p) p=d*.3;
     if (a < abs(c)) { a=c; s=p/4; }
     else s = p/(2*M_PI) * asin (c/a);
-    return -(a*pow(2,10*(t-=1)) * sin( (t*d-s)*(2*M_PI)/p )) + b;
+    
+    t-=1;
+    return -(a*pow(2,10*(t)) * sin( (t*d-s)*(2*M_PI)/p )) + b;
 }
 
 double NSBKeyframeAnimationFunctionEaseOutElastic(double t, double b, double c, double d)
@@ -151,27 +176,40 @@ double NSBKeyframeAnimationFunctionEaseInOutElastic(double t, double b, double c
     if (t==0) return b;  if ((t/=d/2)==2) return b+c;  if (!p) p=d*(.3*1.5);
     if (a < abs(c)) { a=c; s=p/4; }
     else s = p/(2*M_PI) * asin(c/a);
-    if (t < 1) return -.5*(a*pow(2,10*(t-=1)) * sin( (t*d-s)*(2*M_PI)/p )) + b;
-    return a*pow(2,-10*(t-=1)) * sin( (t*d-s)*(2*M_PI)/p )*.5 + c + b;
+    
+    t-=1;
+    if (t < 1) return -.5*(a*pow(2,10*(t)) * sin( (t*d-s)*(2*M_PI)/p )) + b;
+    
+    t-=1;
+    return a*pow(2,-10*(t)) * sin( (t*d-s)*(2*M_PI)/p )*.5 + c + b;
 }
 
 double NSBKeyframeAnimationFunctionEaseInBack(double t, double b, double c, double d)
 {
     const double s = 1.70158;
-    return c*(t/=d)*t*((s+1)*t - s) + b;
+    
+    t/=d;
+    return c*(t)*t*((s+1)*t - s) + b;
 }
 
 double NSBKeyframeAnimationFunctionEaseOutBack(double t, double b, double c, double d)
 {
     const double s = 1.70158;
-    return c*((t=t/d-1)*t*((s+1)*t + s) + 1) + b;
+    
+    t=t/d-1;
+    return c*((t)*t*((s+1)*t + s) + 1) + b;
 }
 
 double NSBKeyframeAnimationFunctionEaseInOutBack(double t, double b, double c, double d)
 {
     double s = 1.70158;
-    if ((t/=d/2) < 1) return c/2*(t*t*(((s*=(1.525))+1)*t - s)) + b;
-    return c/2*((t-=2)*t*(((s*=(1.525))+1)*t + s) + 2) + b;
+    s*=(1.525);
+    t/=d/2;
+    if ((t) < 1) return c/2*(t*t*(((s)+1)*t - s)) + b;
+    
+    t-=2;
+    s*=(1.525);
+    return c/2*((t)*t*(((s)+1)*t + s) + 2) + b;
 }
 
 double NSBKeyframeAnimationFunctionEaseInBounce(double t, double b, double c, double d)
@@ -184,11 +222,14 @@ double NSBKeyframeAnimationFunctionEaseOutBounce(double t, double b, double c, d
     if ((t/=d) < (1/2.75)) {
         return c*(7.5625*t*t) + b;
     } else if (t < (2/2.75)) {
-        return c*(7.5625*(t-=(1.5/2.75))*t + .75) + b;
+        t-=(1.5/2.75);
+        return c*(7.5625*(t)*t + .75) + b;
     } else if (t < (2.5/2.75)) {
-        return c*(7.5625*(t-=(2.25/2.75))*t + .9375) + b;
+        t-=(2.25/2.75);
+        return c*(7.5625*(t)*t + .9375) + b;
     } else {
-        return c*(7.5625*(t-=(2.625/2.75))*t + .984375) + b;
+        t-=(2.625/2.75);
+        return c*(7.5625*(t)*t + .984375) + b;
     }
 }
 
