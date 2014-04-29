@@ -110,9 +110,8 @@
         CAKeyframeAnimation *pathAnimation = [CAKeyframeAnimation animationWithKeyPath:kPathAnimationKeyPath];
         pathAnimation.path = self.animationPath.CGPath;
         pathAnimation.duration = animation.duration;
-        pathAnimation.fillMode = kCAFillModeForwards;
-        pathAnimation.removedOnCompletion = NO;
         
+        [self.pointLayer setPosition:self.animationPath.currentPoint];
         [self.pointLayer addAnimation:pathAnimation forKey:kPathAnimationKeyPath];
         
         [self setNeedsDisplay];
