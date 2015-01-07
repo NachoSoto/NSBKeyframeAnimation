@@ -11,14 +11,21 @@
 #import "NSBKeyframeAnimationFunctions.h"
 
 typedef void(^NSBKeyframeAnimationCompletionBlock)(BOOL finished);
+typedef double(^NSBKeyframeAnimationFunctionBlock)(double t, double b, double c, double d);
 
 @interface NSBKeyframeAnimation : CAKeyframeAnimation
 
-+ (id)animationWithKeyPath:(NSString *)keypath
-                  duration:(NSTimeInterval)duration
-                startValue:(double)startValue
-                  endValue:(double)endValue
-                  function:(NSBKeyframeAnimationFunction)function;
++ (instancetype)animationWithKeyPath:(NSString *)keypath
+							duration:(NSTimeInterval)duration
+						  startValue:(double)startValue
+							endValue:(double)endValue
+							function:(NSBKeyframeAnimationFunction)function;
+
++ (instancetype)animationWithKeyPath:(NSString *)keypath
+							duration:(NSTimeInterval)duration
+						  startValue:(double)startValue
+							endValue:(double)endValue
+					   functionBlock:(NSBKeyframeAnimationFunctionBlock)functionBlock;
 
 @property (nonatomic, copy, readwrite) NSBKeyframeAnimationCompletionBlock completionBlock;
 
